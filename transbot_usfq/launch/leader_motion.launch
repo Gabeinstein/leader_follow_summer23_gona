@@ -1,0 +1,11 @@
+<launch>
+<!--Codigo de Gabriel Oña asistente de investigación de René Játiva. IEE
+Transbot usfq es un paquete de ROS para el proyecto Leader Follower.
+
+El proyecto propuesto consiste en un enjambre de robots que siguen la trayectoria de un lider.
+El lider se identifica por tener una luz roja y su brazo elevado 
+Los seguidores tienen que configurar su trayectoria de forma inteligente para que logren seguir al lider.-->
+
+    <include file="$(find transbot_usfq)/launch/base.launch"/>
+    <node name="leader_Motion" pkg="transbot_usfq" type="leader_motion.py"  output="screen" required="true"/> 
+</launch>
